@@ -17,9 +17,9 @@ CONTEXT:
 
 
 LINKS:
-  - VOTE SERVER CODE        : [voteserver_link]
-  - MODERATOR SERVER CODE   : [moderatorserver_link]
-  - DEMO                    : https://vote.FrostCandy.com 
+  - VOTE SERVER CODE        : [ https://github.com/frostcandy/vote_server ]
+  - MODERATOR SERVER CODE   : [ https://github.com/frostcandy/vote_moderator_server ]
+  - DEMO                    : [ https://vote.FrostCandy.com ]
   - VOTE SERVER Video       : [youtube video instruction]
   - MODERATOR SERVER Video  : [youtube video instruction]
 
