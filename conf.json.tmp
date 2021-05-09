@@ -1,0 +1,8 @@
+{
+    "Frostcandy_server":  "https://yourVOTESERVER.com/vote/",
+    "This_server_port" :  "192.168.1.9:9008",
+    "This_server_pass" :  "yourpassword",
+    "Refresh_seconds"  :  "60",
+    "Nperpage"         :  100,
+    "Allow_remove"     :  1
+}
