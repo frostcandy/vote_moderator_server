@@ -81,6 +81,8 @@ Version: 0.9 - While this software has been tested to be working properly it sho
   
 
 # CONFIG SETUP:  
+  -- Copy conf.json.tmp to conf.json
+  -- The moderator server reads from the conf.json file
   "Frostcandy_server"  : Put the url of the VOTE SERVER here. Ex: "https://MyPrecinct.com"  
   "This_server_port"   : The MODERATOR SERVER IP and PORT     Ex: "192.168.1.9:9008"  
   "This_server_pass"   : Come up with a password              Ex: "password"  
