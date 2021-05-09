@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <title>FrostCandy Votes Admin</title>
+
+  <link rel="icon"          href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Trust your vote. We want to make voting more secure and available to everyone.">
+
+  <script> 
+       console.log("FrostCandy Votes Administration"); 
+       <js>
+  </script>
+  <script src="js/vote.js"></script>
+</head>
+<body onload="init();">
+  <div id="myPopBlk"></div>
+  <div id="myPop"></div>
+  <div id="myModal" class="modal"> <span class="modal-close noselect">&times;</span> <img class="modal-content" id="img01"/> </div>
+
+	<div id="fc_header">
+		<div class="fc_logo"><span>vote.</span><span>Frost</span><span>Candy</span><span>.com</span></div>
+		<div id="top_menu">
+        <div id="button_end_vote" class="btnred noselect">End Vote</div>
+        <div id="vote_has_ended" class="noselect hide">Vote Complete</div>
+        <div id="searchit_div" class="hide"><form>Search: <input type="text" id="searchit" onClick="this.select();" /></form></div>
+		</div>
+	</div>
+	<div id="content_box">
+    <div id="set_password">
+      <form onsubmit="setpassword(event); return false;">Enter your Admin Server Password:<br><input type="password" id="serverpass" value=""/><div id="set_password_button" class="btn noselect">Submit</div></form>
+    </div>
+
+    <div id="voter_results_box"></div>
+		
+		<div id="voter_box" class="hide">
+			<div id="voter_box_list"></div>
+      <div id="voter_box_approval"></div>
+		</div>
+
+	</div>
+    <div id="errnote"><div id="errtext"></div><div class="errclose"></div></div>
+</body>
+</html>

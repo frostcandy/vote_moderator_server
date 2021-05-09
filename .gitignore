@@ -1,0 +1,9 @@
+# Ignore Config File
+conf.json
+
+# Ignore voters folder
+voters/
+
+# Ignore certs folder
+certs/
+
