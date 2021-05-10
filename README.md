@@ -96,5 +96,37 @@ Version: 0.9 - While this software has been tested to be working properly it sho
     - overwritten.   
 
 
+# My Build
+
+Install FrostCandy Moderator Server
+--> sudo git clone https://github.com/frostcandy/vote_moderator_server.git vote_moderator
+
+# Config
+    You can start your moderator server like this:
+    Ex: ./frostcandy_vote 9008 MyPassWord
+
+    The port (default 443) will become 9008 in the example above.
+    The password will be MyPassWord
+
+    If you trust no unwanted people will have access to your computer you can put the server port and server password in your config file so as not to type them every time you start the software.
+
+# The certs directory
+    - To Create new certificates ( frostcandy_vote.crt frostcandy_vote.key )
+    - This will let you connect securely to this frostcandy_vote client server. After running the next line, copy and paste the files to your certs folder.
+
+    - General Security without trusted authority (more compatibility) You'll see the warning for some browsers even if you install the cert.
+    openssl req -x509 -nodes -newkey rsa:2048 -keyout frostcandy_vote.key -out frostcandy_vote.crt -days 3650
+
+    - OpenSSL ≥ 1.1.1 | if you install this version of the certificat you wont see the TLS handshake error | need to edit IP to your ip, Common Name (CN) and altname if you have one.
+    openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes -keyout frostcandy_vote.key -out frostcandy_vote.crt -subj "/CN=example.com" -addext "subjectAltName=DNS:www.example.com,IP:192.168.10.19"
+
+# The API Key
+    - Copy the data you recieved from the VOTE SERVER and paste it in the certs/fc_api_key.pub file. 
+    - When you run the software it will automatically create the fc_api_key.bin file to hold your data securly.
+
+
+# Run
+  - cd vote_moderator
+  - ./frostcandy_vote
 
 

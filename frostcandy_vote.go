@@ -6,7 +6,7 @@ package main
     Description:
 
     * This is the software program people can use to collect receipts from the vote server.
-    * We can afford to import a few third party tools like crypto/tls here, since anyone can compile the code and validate against other builds
+    * We can afford to import a few third party tools, since anyone can compile the code and validate against other builds
 
     Start the webserver 
     ./frostcandy_vote
