@@ -260,7 +260,7 @@ class $${
               break;
   		    case 'html':
               this.unclick();this.unchange();
-  				    this.eleObj[i].innerHTML = meta1;
+              this.eleObj[i].innerHTML = stripScripts(meta1);
               // Rebuild all clickable actions for newly created HTML
               for( var ii=0;ii<$ja.length;ii++ ){ var tempObj = new $$($ja[ii][0]).click($ja[ii][1]); }
               for( var ii=0;ii<$ja2.length;ii++ ){ var tempObj = new $$($ja2[ii][0]).change($ja2[ii][1]); }
@@ -298,6 +298,9 @@ function closeErr(t){ clearTimeout(errTimeout); $('.hasError').removeClass('hasE
 function scriptClean(s){return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
 function cleaner(s){  return (s).replace(/[^a-zA-Z ]/g, ""); }
 function noH(s){ return s.replace(/&/g, "").replace(/</g, "").replace(/>/g, "").replace(/'/g, "").replace(/"/g, "").replace(/`/g, "").replace(/~/g, ""); }
+
+// Even though only the administrators write to the vote page we should still do some sanaty checks to remove scripts from injected html.
+function stripScripts(s) {var div = document.createElement('div'); div.innerHTML = s; var scripts = div.getElementsByTagName('script'); var i = scripts.length; while (i--) { scripts[i].parentNode.removeChild(scripts[i]); } return div.innerHTML;}
 
 function titleCase(s){if(typeof s == 'undefined' || s.trim() == ''){return '';}return s.trim().split(' ').map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase()).join(' ');}
 function shorts(s,n){if(typeof s == 'undefined'){return '';}return s.substring(0,n); }
